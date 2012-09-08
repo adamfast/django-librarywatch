@@ -1,0 +1,20 @@
+LibraryWatch makes checking for updates to the packages you have installed easy, with a handy Django management command wrapper.
+
+Install it, add 'librarywatch' to settings.INSTALLED_APPS and run python manage.py check_for_updates to see if there are any newer libraries available.
+
+Output will look similar to:
+celery (3.0.5 < 3.0.9)
+django-celery (3.0.4 < 3.0.9)
+django-haystack (2.0.0-beta < 1.2.7)
+httplib2 (0.7.4 < 0.7.5)
+kombu (2.3.2 < 2.4.5)
+python-dateutil (1.5 < 2.1)
+requests (0.13.5 < 0.14.0)
+PIL (1.1.7 < 1.1.6)
+
+It's a simple app / function, but will save me (and hopefully you) time and be easily installable on everything you do.
+
+Future ideas:
+    - Track versions to allow ignoring when newer versions aren't backwards compatible so you absolutely DON'T want to upgrade.
+    - Handle projects with multiple versions availabe better (i.e.) python-dateutil with 2.0 for Py3k only, 1.x series for Python 2.x)
+    - Detect things not from PyPi but pulled from repositories (i.e. GitHub / Bitbucket) and use their respective APIs to determine if the SHA installed is the most recent.

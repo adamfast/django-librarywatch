@@ -24,7 +24,7 @@ class Command(BaseCommand):
 
             try:
                 if available[0] != dist.version:
-                    print '{dist.project_name} ({dist.version} < {available})'.format(dist=dist, available=available[0])
+                    print '{dist.project_name} ({dist.version} != {available})'.format(dist=dist, available=available[0])
 
             except IndexError:
                 pass

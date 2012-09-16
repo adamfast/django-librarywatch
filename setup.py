@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='librarywatch',
-    version='1.0.0',
+    version='1.0.1',
     description='A utility to check PyPi for updates to currently installed packages',
     author='Jeff Triplett / Adam Fast',
     author_email='adamfast@gmail.com',

@@ -14,6 +14,14 @@ PIL (1.1.7 < 1.1.6)
 
 It's a simple app / function, but will save me (and hopefully you) time and be easily installable on everything you do.
 
+If you want to ignore versions (for instance you're tracking django-haystack on git, or want to make sure python-dateutil doesn't recommend you go to the 2.x branch with your app on Python 2.x) you can add LIBRARYWATCH_IGNORE_VERSIONS to your settings file.
+
+LIBRARYWATCH_IGNORE_VERSIONS = {
+    'python-dateutil': '*',  # 2.x series it recommends is not for Python 2.x
+    'django-haystack': '*',  # running from git MASTER
+    'PIL': '1.1.6',  # running 1.1.7 which doesn't appear to be on PyPI
+}
+
 Future ideas:
     - Track versions to allow ignoring when newer versions aren't backwards compatible so you absolutely DON'T want to upgrade.
     - Handle projects with multiple versions availabe better (i.e.) python-dateutil with 2.0 for Py3k only, 1.x series for Python 2.x)
